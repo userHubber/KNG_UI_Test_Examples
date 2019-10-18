@@ -25,7 +25,8 @@ public class Case_FirstStageAndLoginPositive extends DriverTools {
 
     @BeforeTest(alwaysRun = true)
     public void preconditions() {
-        System.out.println("РЕГИСТРАЦИЯ(ПОЗИТИВ/НЕГАТИВ) # ЛОГИН/ЛОГАУТ");
+        System.out.println("DAROU");
+//        System.out.println("РЕГИСТРАЦИЯ(ПОЗИТИВ/НЕГАТИВ) # ЛОГИН/ЛОГАУТ");
         super.driverAssign();
         case_data = new Data_loginAndRegistration();
         login$reg_modal = new RegLoginPopUp();
