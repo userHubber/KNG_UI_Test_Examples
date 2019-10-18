@@ -89,11 +89,9 @@
             </properties>-->
             
             <build>
-              
+                
                 <resources>
-                    
                     <resource>
-                        
                         <directory>src/main/resources</directory>
                         <filtering>true</filtering>
                     </resource>
@@ -105,10 +103,6 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>2.22.1</version>
                         <configuration>
-              <properties>
-                <domain>https://www.kupivip.ru</domain>
-                <driver>chrom</driver>
-            </properties>
                             <groups>prod</groups>
                             <suiteXmlFiles>
                                 <suiteXmlFile>src\test\resources\Prod.xml</suiteXmlFile>
@@ -186,10 +180,13 @@
         
     
     
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-</properties>
-<name>KNG_UI_Test_Examples</name>
+    <properties>
+        <!--<domain>https://www.kupivip.ru</domain>-->
+        <domain>https://dev.web.kupivip.local</domain>
+        <driver>chrom</driver>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <name>KNG_UI_Test_Examples</name>
 </project>
