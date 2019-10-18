@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Prod" verbose ="1">
+    
+    <test name="RegistrationFirstStageAndLoginPositive">
+        <classes>
+            <class name="kng.tests.loginAndRegistration.Case_FirstStageAndLoginPositive"/>
+        </classes>
+    </test>
+     
+    <test name="RegistrationSecondStage">
+        <classes>
+            <class name="kng.tests.loginAndRegistration.Case_SecondStage"/>
+        </classes>
+    </test>
+    
+<!--    <test name="AutoregCashMoskvaPVZ">
+        <classes>
+            <class name="kng.tests.orderCreation.cash.moskva_pvz.Case_PVZ"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregCashMoskvaEuro">
+        <classes>
+            <class name="kng.tests.orderCreation.cash.moskva_euro.Case_EuroMoskva"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregCardMoskva">
+        <classes>
+            <class name="kng.tests.orderCreation.card.moskva.Case_CardMoskva"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregSplitMoskvaCash">
+        <classes>
+            <class name="kng.tests.orderCreation.cash.moskva_split.Case_OrderSplit"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregCashMoskvaUnder">
+        <classes>
+            <class name="kng.tests.orderCreation.cash.moskva.Case_CashMoskvaThresholdUnder"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregCashMoskvaUp">
+        <classes>
+            <class name="kng.tests.orderCreation.cash.moskva.Case_CashMoskvaThresholdUp"/>
+        </classes>
+    </test>
+    
+    <test name="AutoregSplitMoskvaCard">
+        <classes>
+            <class name="kng.tests.orderCreation.card.moskva_split.Case_OrderSplit"/>
+        </classes>
+    </test>
+    
+    <test name="ChekoutProductRecounting">
+        <classes>
+            <class name="kng.tests.checkout.Case_ProductRecounting"/>
+        </classes>
+    </test>
+    
+    <test name="ChekoutPVZErrors">
+        <classes>
+            <class name="kng.tests.checkout.Case_PVZ_Errors"/>
+        </classes>
+    </test> 
+    
+    <test name="CheckoutFieldsErrors">
+        <classes>
+            <class name="kng.tests.checkout.Case_FieldsErrors"/>
+        </classes>
+    </test>    
+    
+    <test name="CheckoutEuroLimits">
+        <classes>
+            <class name="kng.tests.checkout.Case_EuroLimits"/>
+        </classes>
+    </test>
+    
+    <test name="Basket">
+        <classes>
+            <class name="kng.tests.basket.Case_ThreeProducts"/>
+        </classes>
+    </test>
+    
+    <test name="Catalog">
+        <classes>
+            <class name="kng.tests.catalog.Case_Catalog"/>
+        </classes>
+    </test>
+    
+    <test name="ProductReviews">
+        <classes>
+            <class name="kng.tests.reviews.Case_ReviewsProduct"/>
+        </classes>
+    </test>-->
+    
+    <test name="FavoriteSubscribe">
+        <classes>
+            <class name="kng.tests.favorite.Case_FavoriteSubscribe"/>
+        </classes>
+    </test>
+    
+<!--    <test name="BrandSubscribe">
+        <classes>
+            <class name="kng.tests.brands.Case_BrandSubscribe"/>
+        </classes>
+    </test>
+    
+    <test name="AccountRepresentation">
+        <classes>
+            <class name="kng.tests.account.Case_AccountRepresentation"/>
+        </classes>
+    </test>
+    
+    <test name="MainPage">
+        <classes>
+            <class name="kng.tests.mainPage.Case_MainPage"/>
+        </classes>
+    </test>
+    
+    <test name="InfoPages">
+        <classes>
+            <class name="kng.tests.infoPages.Case_InfoPages"/>
+        </classes>
+    </test>
+    
+    <test name="Tardis">
+        <classes> 
+            <class name="kng.tests.scripts.Case_Tardis"/> 
+        </classes> 
+    </test> -->
+    
+    <!--*Admin*#########################-->   
+<!--    <test name="RetailRegistration">
+        <classes>
+            <class name="kng.tests.admin.retailReg.Case_RegistrationRetail"/>
+        </classes>
+    </test>
+    
+    <test name="RetailRegConfirmation">
+        <classes>
+            <class name="kng.tests.admin.retailReg.Case_ConfirmationRetail"/>
+        </classes>
+    </test>   -->
+    
+</suite>
+
+
+
+    

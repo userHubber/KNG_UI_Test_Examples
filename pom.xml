@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kng</groupId>
+    <artifactId>KNG_UI_Test_Examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.13.0</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.13.0</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-remote-driver</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.8</version>
+            <scope>test</scope>
+        </dependency>
+        
+    </dependencies>
+    
+    <profiles>
+        
+        <profile>
+            <id>PROD_chrom</id>
+            
+            <properties>
+                <domain>https://www.kupivip.ru</domain>
+                <driver>chrom</driver>
+            </properties>
+            
+            <build>
+                
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+                
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.1</version>
+                        <configuration>
+                            <groups>prod</groups>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src\test\resources\Prod.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration> 
+                    </plugin>
+                </plugins>
+            </build>   
+        </profile>
+        
+<!--        <profile>
+            <id>PRE_chrom</id>
+            
+            <properties>
+                <domain>https://pre.web.kupivip.local</domain>
+                <driver>chrom</driver>
+            </properties>
+            
+            <build>
+                
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+                
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.1</version>
+                        <configuration>
+                            <groups>pre</groups>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src\test\resources\Pre.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration> 
+                    </plugin>
+                </plugins>
+            </build>   
+        </profile>
+        
+        <profile>
+            <id>DEV_chrom</id>
+            
+            <properties>
+                <domain>https://dev.web.kupivip.local</domain>
+                <driver>chrom</driver>
+            </properties>
+            
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+                
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.22.1</version>
+                        <configuration>
+                            <groups>dev</groups>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src\test\resources\Dev.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration> 
+                    </plugin>
+                </plugins>
+            </build>   
+        </profile>
+        -->
+        
+    </profiles>
+    
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <name>KNG_UI_Test_Examples</name>
+</project>
